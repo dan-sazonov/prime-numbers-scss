@@ -1,1 +1,18 @@
-// write your code here
+@function is_prime($number) {
+  @if ($number % 2 == 0) {
+    @return ($number == 2);
+  }
+  $divisor: 3;
+  @while (($divisor * $divisor <= $number) and ($number % $divisor != 0)) {
+    $divisor: $divisor + 2;
+  }
+  @return ($divisor * $divisor > $number)
+}
+
+@for $id from 1 through 50 {
+  @if is_prime($id) {
+    #el-#{$id} {
+      color: red;
+    }
+  }
+}
