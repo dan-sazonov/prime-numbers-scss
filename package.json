@@ -1,0 +1,27 @@
+{
+  "name": "codepen-template",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dan-sazonov/codepen-template.git"
+  },
+  "author": {
+    "name": "Dan Sazonov",
+    "email": "p-294803@yandex.com",
+    "url": "https://github.com/dan-sazonov"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dan-sazonov/codepen-template/issues"
+  },
+  "homepage": "https://github.com/dan-sazonov/codepen-template#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.14",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.1.0"
+  }
+}
