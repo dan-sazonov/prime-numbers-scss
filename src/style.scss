@@ -22,3 +22,32 @@
     }
   }
 }
+
+// common styles:
+* {
+  color: #3d3d3d;
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+
+  section:first-child {
+    margin-right: 3rem;
+  }
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h1 {
+  margin-bottom: .7rem;
+}
+
+td {
+  padding: .25rem;
+}
