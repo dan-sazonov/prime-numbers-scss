@@ -1,0 +1,26 @@
+$primes: (false);
+@for $_ from 2 through 50 {
+  // create "the sieve"
+  $primes: append($primes, true);
+}
+
+@function sift($index) {
+  // change the value of the list element ($index) to false
+  // return the modified list
+  $lst_new: ();
+  @for $el from 1 through 50 {
+    $lst_new: append($lst_new, if($el == $index, false, nth($primes, $el)));
+  }
+  @return $lst_new
+}
+
+@for $num from 2 through 50 {
+  @if nth($primes, $num) {
+    $i: $num * $num;
+    @while ($i <= 50) {
+      // "cross out" every composite number
+      $primes: sift($i);
+      $i: $i + $num;
+    }
+  }
+}
