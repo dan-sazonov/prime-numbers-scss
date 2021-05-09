@@ -1,5 +1,7 @@
+@import "config";
+
 $primes: (false);
-@for $_ from 2 through 50 {
+@for $_ from 2 through $max_el {
   // create "the sieve"
   $primes: append($primes, true);
 }
@@ -8,16 +10,16 @@ $primes: (false);
   // change the value of the list element ($index) to false
   // return the modified list
   $lst_new: ();
-  @for $el from 1 through 50 {
+  @for $el from 1 through $max_el {
     $lst_new: append($lst_new, if($el == $index, false, nth($primes, $el)));
   }
   @return $lst_new
 }
 
-@for $num from 2 through 50 {
+@for $num from 2 through $max_el {
   @if nth($primes, $num) {
     $i: $num * $num;
-    @while ($i <= 50) {
+    @while ($i <= $max_el) {
       // "cross out" every composite number
       $primes: sift($i);
       $i: $i + $num;

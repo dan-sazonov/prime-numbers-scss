@@ -3,7 +3,7 @@
 
 // generate first table:
 .simple {
-  @for $id from 1 through 50 {
+  @for $id from 1 through $max_el {
     @if is_prime($id) {
       .el-#{$id} {
         color: red;
@@ -14,7 +14,7 @@
 
 // generate second table:
 .eratosthenes {
-  @for $id from 1 through 50 {
+  @for $id from 1 through $max_el {
     @if nth($primes, $id) {
       .el-#{$id} {
         color: red;
