@@ -1,27 +1,31 @@
-# Codepen Template
-**A template for comfortable creating Pens for Codepen in your IDE.**
+<p align="center"><img src="demo.jpg" alt="demo example"></p>
 
-## Getting Started
+# Prime numbers: SCSS only
+[![GitHub](https://img.shields.io/github/license/dan-sazonov/prime-numbers-scss)](https://github.com/dan-sazonov/prime-numbers-scss/blob/main/LICENSE)
+![OpenSource](https://img.shields.io/badge/Open%20Source-%E2%99%A5-red)<br>
+I was wondering if it is possible to implement some useful algorithms on SCSS. Well, here is a simple primality test and the sieve of Eratosthenes.
 
-First of all, clone this repo:<br>
-`https://github.com/dan-sazonov/codepen-template.git`<br>
-> _The easiest way to continue is to click [here](https://codepen.io/pen/?template=gOgzjPz) and go to step 5. If you want to explore the template, read the next_<br>
+## How It Works
+### Simple test
+Implemented in the `is_prime () 'function in the `simple.scss' file. In it, we iterate through all possible odd divisors up to the square root of the divisible, and if the divisor was not found (meaning, if the number is prime), we return `true`.
 
-Then you should tweak the codepen editor a bit:
-1. Open new pen and click "⚙ Settings";
-2. Open the "HTML" tab and paste this in the "Stuff for &lt;head&gt;":
- ``` html 
-<script src="https://kit.fontawesome.com/62bd6fa838.js" crossorigin="anonymous"></script>
- ```
-3. Open the "CSS" tab and select "SCSS" in "CSS Preprocessor". Also select "Normalize" in "CSS Base";
-4. Open the "JS" tab and add jquery in "Add External Scripts/Pens";
-5. Install packages with `npm i` and run the project locally using `npm run dev`. Change the code in the files in the `/src` folder.
+### Sieve of Eratosthenes
+Implemented in the `eratosthenes.scss` file. After running this code, the `primes` list will be created. For primes, the value of the corresponding index (starting from 1) will be `true`. This algorithm is not optimal. In SCSS, you cannot replace a list element by its index. To get around this, the `sift ()` function was created, which performs n more actions at each iteration, which is why the complexity of the algorithm is close to _O(n<sup>2</sup>)_.
+
+### Сoloring the tables
+To display the output data, two tables are used (file `index.html`). The number of cells (which corresponds to the maximum number you are looking for) is written in the file `config.scss` in the variable `max_el`. If the number is simple, it will be colored red. This is implemented in the `style.scss` file - we just check each number from 1 to `$max_el` in one of the above ways.
+
+## How to Use It
+1. Clone this project locally;
+2. In the main directory, run the `npm i` command to install all the necessary packages;
+3. To start the live server, run the command `npm run dev` or just `gulp`.<br>
+You can also explore this online at [Codepen](https://codepen.io/dan-sazonov).
 
 ## Contributing
-I do not know what can be changed here or where there may be bugs, but if you have any ideas, open the [issue](https://github.com/dan-sazonov/codepen-template/issues) or make a fork and offer a [pull request](https://github.com/dan-sazonov/codepen-template/pulls).
+If you have any ideas or found any bugs here, plz open the [issue](https://github.com/dan-sazonov/prime-numbers-scss/issues) or make a fork and offer a [pull request](https://github.com/dan-sazonov/prime-numbers-scss/pulls). And it will be great if you tell me about these ideas, maybe I'm already working on them.
 
 ## License
-Code released under the [MIT License](https://github.com/dan-sazonov/codepen-template/blob/main/LICENSE). You can use the code for any purpose by providing a link to the author.
+Code released under the [MIT License](https://github.com/dan-sazonov/prime-numbers-scss/blob/main/LICENSE). You can use the code for any purpose by providing a link to the author.
 
 ## Author
 The author of this repository and code - [@dan-sazonov](https://github.com/dan-sazonov). <br>
