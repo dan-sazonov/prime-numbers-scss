@@ -7,7 +7,7 @@ I was wondering if it is possible to implement some useful algorithms on SCSS. W
 
 ## How It Works
 ### Simple test
-Implemented in the `is_prime ()` function in the `simple.scss' file. In it, we iterate through all possible odd divisors up to the square root of the divisible, and if the divisor was not found (meaning, if the number is prime), we return `true`.
+Implemented in the `is_prime ()` function in the `simple.scss` file. In it, we iterate through all possible odd divisors up to the square root of the divisible, and if the divisor was not found (meaning, if the number is prime), we return `true`.
 
 ### Sieve of Eratosthenes
 Implemented in the `eratosthenes.scss` file. After running this code, the `primes` list will be created. For primes, the value of the corresponding index (starting from 1) will be `true`. This algorithm is not optimal. In SCSS, you cannot replace a list element by its index. To get around this, the `sift ()` function was created, which performs n more actions at each iteration, which is why the complexity of the algorithm is close to _O(n<sup>2</sup>)_.
