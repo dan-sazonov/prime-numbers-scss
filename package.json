@@ -23,6 +23,7 @@
     "browser-sync": "^2.26.14",
     "gulp": "^4.0.2",
     "gulp-sass": "^4.1.0",
+    "ws": "^7.4.6",
     "yargs-parser": ">=5.0.1"
   }
 }
