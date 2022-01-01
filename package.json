@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/dan-sazonov/prime-numbers-scss#readme",
   "devDependencies": {
+    "axios": "^0.21.4",
     "browser-sync": "^2.26.14",
     "glob-parent": "^5.1.2",
     "gulp": "^4.0.2",
